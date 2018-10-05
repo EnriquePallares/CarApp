@@ -7,6 +7,10 @@
     <string name="guardar">Guardar</string>
     <string name="limpiar">Limpiar</string>
     <string name="guardado_exitoso">Carro guardado exitosamente</string>
+    <string name="err_vacio">No debe haber campos vacíos</string>
+    <string name="err_cero">Ingrese un valor mayor a cero</string>
+    <string name="err_colores">Por favor selecciona un color</string>
+    <string name="err_marcas">Por favor selecciona una marca</string>
 
     <string name="rojo">Rojo</string>
     <string name="azul">Azul</string>
@@ -20,7 +24,9 @@
     <string name="subaru">Subaru</string>
 
     <string name="texto_colores">Colores</string>
+    <string name="select_colores">Selecciona un color</string>
     <string-array name="colores">
+        <item>@string/select_colores</item>
         <item>@string/rojo</item>
         <item>@string/negro</item>
         <item>@string/blanco</item>
@@ -28,7 +34,9 @@
     </string-array>
 
     <string name="texto_marcas">Marcas</string>
+    <string name="select_marcas">Selecciona una marca</string>
     <string-array name="marcas">
+        <item>@string/select_marcas</item>
         <item>@string/kia</item>
         <item>@string/chevrolet</item>
         <item>@string/toyota</item>

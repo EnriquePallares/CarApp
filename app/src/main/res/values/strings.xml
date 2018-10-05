@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">CarApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="titulo_agregar">AGREGAR</string>
+    <string name="placa">Placa</string>
+    <string name="precio">Precio</string>
+    <string name="guardar">Guardar</string>
+    <string name="limpiar">Limpiar</string>
+    <string name="guardado_exitoso">Carro guardado exitosamente</string>
+
+    <string name="rojo">Rojo</string>
+    <string name="azul">Azul</string>
+    <string name="blanco">Blanco</string>
+    <string name="negro">Negro</string>
+
+    <string name="kia">Kia</string>
+    <string name="toyota">Toyota</string>
+    <string name="renault">Renault</string>
+    <string name="chevrolet">Chevrolet</string>
+    <string name="subaru">Subaru</string>
+
+    <string name="texto_colores">Colores</string>
+    <string-array name="colores">
+        <item>@string/rojo</item>
+        <item>@string/negro</item>
+        <item>@string/blanco</item>
+        <item>@string/azul</item>
+    </string-array>
+
+    <string name="texto_marcas">Marcas</string>
+    <string-array name="marcas">
+        <item>@string/kia</item>
+        <item>@string/chevrolet</item>
+        <item>@string/toyota</item>
+        <item>@string/renault</item>
+        <item>@string/subaru</item>
+    </string-array>
+</resources>

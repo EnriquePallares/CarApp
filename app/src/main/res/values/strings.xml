@@ -11,6 +11,7 @@
     <string name="err_cero">Ingrese un valor mayor a cero</string>
     <string name="err_colores">Por favor selecciona un color</string>
     <string name="err_marcas">Por favor selecciona una marca</string>
+    <string name="err_placa">Placa ya existe</string>
 
     <string name="rojo">Rojo</string>
     <string name="azul">Azul</string>

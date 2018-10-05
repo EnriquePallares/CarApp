@@ -21,6 +21,7 @@ public class AgregarCarros extends AppCompatActivity {
     private Spinner cmbColores, cmbMarcas;
     private ImageView foto;
     private ArrayList<Integer> fotos;
+    private ArrayList<Carro> carros;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,18 +53,40 @@ public class AgregarCarros extends AppCompatActivity {
     public void guardar(View v){
         String placa;
         int foto, marcas, colores, precio;
+        Carro c;
         if (validar()) {
             foto = this.fotoAleatoria();
             placa = txtPlaca.getText().toString();
             precio = Integer.parseInt(txtPrecio.getText().toString());
             marcas = cmbMarcas.getSelectedItemPosition();
             colores = cmbColores.getSelectedItemPosition();
+            carros = Datos.obtener();
+            Boolean placaExiste = false;
 
-            Carro c = new Carro(foto, placa, colores, marcas, precio);
-            c.guardar();
-            limpiar();
+            if(carros.size() == 0){
+                c = new Carro(foto, placa, colores, marcas, precio);
+                c.guardar();
+                limpiar();
 
-            Snackbar.make(v, getResources().getString(R.string.guardado_exitoso), Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(v, getResources().getString(R.string.guardado_exitoso), Snackbar.LENGTH_SHORT).show();
+            } else {
+                for (int i = 0; i < carros.size(); i++) {
+                    if (carros.get(i).getPlaca().equalsIgnoreCase(placa)) {
+                        placaExiste = true;
+                    } else {
+                        placaExiste = false;
+                    }
+                }
+                if(placaExiste){
+                    Toast.makeText(this, getResources().getString(R.string.err_placa), Toast.LENGTH_SHORT).show();
+                }else{
+                    c = new Carro(foto, placa, colores, marcas, precio);
+                    c.guardar();
+                    limpiar();
+
+                    Snackbar.make(v, getResources().getString(R.string.guardado_exitoso), Snackbar.LENGTH_SHORT).show();
+                }
+            }
         }
     }
 
